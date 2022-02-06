@@ -70,3 +70,81 @@
 
 
 ## Transport Layer
+### Which of the following statements about TCP are correct?
+- The retransmission timeout used by TCP depends partly on the distance between sender and receiver.
+- TCP includes mechanisms both for flow control and congestion control.
+- Before data can be transmitted, a connection has to be established.
+- The flow control used by TCP normally gives superior performance compared to stop-and-wait.
+
+### Which of the following statements about DNS are true? 
+- An authoritative DNS server knows the answers to queries about names in the domain for which it is responsible ("kth.se", for example).
+- A DNS server uses caching to be able to answer queries faster.
+- An organization's local DNS server (or default name server) helps other computers within the organization to resolve DNS queries.
+- Each organization, company, etc., that has a domain name is also responsible for answering DNS queries about its domain.
+
+### Which of the following statements about TCP congestion control are correct?
+- During the slow start phase, the congestion window increases exponentially in size.
+- During the congestion avoidance phase, the congestion window increases linearly in size.
+
+### Question 4
+Assume a reliable transport protocol of the same kind as described in the course book and the lectures (rdt 3.0 in the book), and that the protocol must work over a network where both bit errors and packet loss can occur.
+This protocol uses several mechanisms to detect and deal with the errors above, mainly timers, sequence numbers, checksums, and acknowledgements (ACKs).
+- We can deal with packet loss through the use of sequence numbers, ACKs, and timers. Checksums are not needed.
+- It is sufficient with checksums, ACKs, and sequence numbers to deal with bit errors (in data and ACKs). Timers are not needed
+
+### TCP is connection oriented, which means that it has to deal with connection estblishment and termination. Which of the following statements are true? 
+- When a TCP connection is being established, the very first segment sent is a TCP SYN segment.
+- When TCP closes a connection, it normally uses a 4-way handshake.
+
+### Question 6
+TCP and UDP are both transport layer protocols, but they operate very differently.
+
+Which of the following alternatives are correct?
+-  A UDP sender can "starve out" a TCP sender from the network.
+- UDP can protect data with a checksum, but does not always do that.
+- A server supporting both TCP and UDP can use the same port number for communicating with one client over UDP and another client over TCP.
+
+### Question 7
+We have studied two different protocols for flow control: Go-Back-N and Stop-and-wait.
+
+Below is a list of properties. Choose the protocol(s) for which the property is valid.
+#### Go-Back-N
+- Requires the sender to buffer multiple packets.
+- Packet loss can require retransmission even of serveral correctly delivered packets.
+- Use "cumulative ACKs"
+
+#### Stop-and-Wait
+- Normally gives lowest utilzation of available network capacity.
+- Two sequence numbers are sufficient.
+
+### Question 8
+Assume we have a transport level connection with a **capacity of 8 Mbit/s** and that the delay between sender and **receiver is 5 ms** (one-way).
+
+Which is the optimal window size in bytes that the sender should use?
+
+Hint: calculate the bandwidth-delay product.
+
+Answer in number of bytes (not kB, not bits). Give only the value without units as your answer.
+
+#### Answer
+Optimal window size = capacity x RTT = 8 Mbit/s x 10ms (=5ms (one-way) * 2) = 10_000 bytes
+
+### DNS can be seen as a distributed database. What kind of lookup operations (or translations) are supported by DNS? 
+- Name to IPv6 address
+- Name to name
+- Name to IPv4 address
+- Name to mail server
+- Name to authoritative DNS server
+
+###  Web cookies, or HTTP cookies, are used by many web servers, for different purposes. Which of the following statements about web cookies are true? 
+- Cookies are created by the web server and stored in the web client.
+- By using cookies, a web server can keep track of when a user last visited the site.
+- By using cookies, web servers can for instance keep track of user-specific information, such as shopping baskets.
+
+###  You have just started your computer and the first thing you do is to open a web browser to visit the site "www.kth.se". Which  application and transport layer protocols need to be involved in order to fetch the web page to your browser? 
+- DNS
+- TCP
+- UDP
+- HTTP
+- 
+DNS over UDP to translate the domain name to an IP address, HTTP over TCP to fetch the web page.
