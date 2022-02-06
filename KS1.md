@@ -23,11 +23,11 @@
   - Internet access, contains the link to Internet Service Provider (ISP). [Digital Subscriber Line(xDSL), Optical Fiber, Data Over Cable Service Interface Specification(DOCSIS), Wireless broadband]
 - Packet switching: **Store-and-forward**, entire packet must arrive at a router before it can be transmitted on a next link.
 - **Internet protocol stack** have five layers. (1) Application, (2) Transport, (3) Network, (4) Link, (5) Physical.
-1. Support network applications. [File transfer Protocol(FTP), Simple Mail Transfer Protocol(SMTP), Hypertext Transfer Ptocol(HTTP)]
-2. Process-process data transfer. Provide communication between application processes on different hosts. [Transmission Control Protocol(TCP), User Datagram Protocol(UDP)]
-3. Routing of datagrams from source to destination. [IP, routing protocols]
-4. Data transfer between beigboring network elements. [Ethernet, IEEE 802.11 (WIFI), PPP]
-5. bits "on the wire".
+1. Support network applications. [File transfer Protocol(FTP), Simple Mail Transfer Protocol(SMTP), Hypertext Transfer Ptocol(HTTP)]. Rules for communication between processes on different hosts that together make up an application.
+2. Process-process data transfer. Provide communication between application processes on different hosts. [Transmission Control Protocol(TCP), User Datagram Protocol(UDP)].
+3. Routing of datagrams from source to destination. [IP, routing protocols] Provides support for communication between hosts, via any routers in between.
+4. Data transfer between beigboring network elements. [Ethernet, IEEE 802.11 (WIFI), PPP]. Provides support for communication between directly connect routers or hosts.
+5. bits "on the wire". Defines for instance electrical and optical properties.
 
 
 ## Application Layer
@@ -45,7 +45,7 @@
 
 - Request Method types. [HTTP/1.0, HTTP/1.1, HTTP/2]
   - HTTP/1.0,  = GET, POST, HEAD
-  - HTTP/1.1, += PUT, DELETE
+  - HTTP/1.1, += PUT, DELETE, HTTP is a text-based protocol(not binary), which means that HTTP requests and responses are transmitted in text format. Each web object (page , image, movie, etc.) has a unique identifier hat can be used to address the object. By using web caches it is possible to reduce the response time for client requests.
   - HTTP/2.X   = More HTTP transfer per page, more data per transfer, Request/response stop-and-wait. TCP Efficiency (Congestion control, Redundancy with same information, Stop-and-wait nature of TCP handshakes. Multiplexing to support loading of multiple objects at the same time over single connection.
 - Mail access protocols. SMTP -> [POP, IMAP,  HTTP]
   - POP, Post Office protocol: authorization, download.
@@ -53,6 +53,19 @@
   - HTTP, gmail, Hotmail, Yahoo! Mail, etc.
 
 - Domain Name System, DNS. [Distributed database, application-layer protocol]
+- Asymmetric digital subscriber line(ADSL), physical line
+- Data Over Cable Service Interface Specification(DOCSIS), is an international telecommunications standard that permits the addition of high -bandwith data transfer to an existing cable television (CATV) system.
+- Internet Exchange Point, IXP
+  - A meeting place where ISPs connect to each other.
+- Tier 1 ISP
+  - Often has intentional coverage
+  - Have mutal agreements for exchanging traffic with each other, free of charge ("peering agreements").
+- Access ISP
+  - Connects to the end user (home, company, university, etc)
+  - Is usually a customer of one (or more) Tier 1 ISP, and is being charged for sending and receiving traffic.
+- P2P
+  - A P2P network has no predefined structure. Instead it is formed dynamically by the nodes ("peers") that for the moment are participating in the network (charing a file, for instance)
+  - P2P networks rely on principle that users make their resources available for sharing (resources for stage, communication, processing, etc)
 
 
 
